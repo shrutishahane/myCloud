@@ -1,0 +1,46 @@
+************************************************************
+		Cloudwatch Log Mointoring
+************************************************************
+
+
+
+----*** Create IAM role ***----
+
+
+* Go to IAM 
+
+* Go to policies -> Create policy -> Select JSON
+
+* Enter the following policy
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+    ],
+      "Resource": [
+        "arn:aws:logs:*:*:*"
+    ]
+  }
+ ]
+}
+
+* Press -> Review policy
+
+* Give name to policy 
+
+* Create Policy
+
+* Go to Roles -> Create Roles -> Select EC2
+
+* In permissions select the policy that you created above.
+
+* Create role
+
+* Attach the role to the EC2 instance
