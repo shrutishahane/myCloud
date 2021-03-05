@@ -1,0 +1,17 @@
+************************************************************
+		            Cloudwatch RAM Mointoring
+************************************************************
+
+
+----*** Create IAM role ***----
+
+* Go to IAM 
+
+* Create Role
+
+* Under permission - tick - CloudwatchFullAccess
+
+* Attach role to the EC2 instance
+
+
+----*** Configure Monitoring Script ***----
